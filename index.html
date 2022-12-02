@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zn">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走进梦的世界</title>
+	<style type="text/css">
+	body{
+			background-image: url(0.3.png);
+			background-repeat: no-repeat;
+/*		只要一张背景图，不重复*/
+		    background-size: cover;
+		    display: flex;
+			justify-content: center;
+		    align-items: center; 
+		    height: 16vh;
+		/*背景图平铺*/
+		
+		}
+		.card{position: relative;}
+		.card .front,.card .back{position: absolute;left: 0;top: 840px;backface-visibility: hidden;transition: all 0.3s;}
+		/*定义初始位置，和操作时间*/
+		.card .front{transform:rotateY(0deg)}
+		.card .back{transform:rotateY(180deg)}
+		/*原始位置*/
+		.card:hover .front{transform:rotateY(180deg)}
+		.card:hover .back{transform:rotateY(0deg)}
+		/*hover是鼠标，指鼠标移动到此位置之后的操作*/
+		.card5{margin-top: 0px;position: absolute;left: 0px}
+		.card1{margin-top: 320px;position: absolute;left: 335px}
+		.card2{margin-top: 0px;position: absolute;left: 670px}
+		.card3{margin-top: 320px;position: absolute;left: 1005px}
+		.card4{margin-top: 0px;position: absolute;left: 1340px}
+		/*其余图片相对于第一张位置*/
+        .a{
+            position: relative;
+            top: 250px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 0 30px;
+        }
+        .c,.b{
+            font: 900 100px '';
+            line-height: 150px;
+            position: absolute;
+            color: cadetblue;
+            top: 0;
+            /* 使文字上下移动时有0.4s的过渡效果 */
+            transition: .4s;
+        }
+
+        .c{
+            /* 裁剪文字的上半部分，括号里的四个值分别是
+            top，right，bottom，left */
+            clip-path: inset(49% 0 0 0);
+        }
+        .b{
+            /* 裁剪文字的下半部分 */
+            clip-path: inset(1% 0 50% 0);
+        }
+        .a:hover .b,.a:hover .c{
+            /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+            top: calc(var(--i)*1px);
+        }
+        .a:hover .d{
+            opacity: 1;
+        }
+        .d{
+            text-decoration: none;
+            color: cornflowerblue;
+            font: 600 30px '';
+            line-height: 150px;
+            opacity: 0;
+            transition: .3s;
+        }
+		
+	</style>
+
+</head>
+
+<body>
+	<div class="a">
+	      <div class="b" style="--i:-30">WELCOME</div>
+		  <div class="c" style="--i:30">WELCOME</div>
+		<div class="d">一书一世界一卷一洞天</div>
+	</div>
+	
+	<div class="a">
+	      <div class="b" style="--i:-30">TO</div>
+		  <div class="c" style="--i:30">TO</div>
+		<div class="d">♥</div>
+	</div>
+	
+	<div class="a">
+	      <div class="b" style="--i:-30">DREAM</div>
+		  <div class="c" style="--i:30">DREAM</div>
+		<div class="d">生如夏花人皆有梦</div>
+		
+	</div>
+	
+	
+	<p></p>
+	<div class="card card5">
+	<a href="https://www.baidu.com" class="front"><img src="1front.png" alt="无限流小说薄雾"></a>
+<!--		a是加入超链接，img加入图片（需要在同一目录下），alt是加载不出来图片的时候显示的文字-->
+	<a href="https://www.baidu.com" class="back"><img src="1back.png" alt="无限流小说薄雾"></a>
+		
+	</div>
+	
+	<div class="card card1">
+	<a href="https://www.baidu.com" class="front"><img src="2front.png" alt="古风小说有姝"></a>
+	<a href="https://www.baidu.com" class="back"><img src="2back.png" alt="古风小说有姝"></a>
+		
+	</div>
+	
+	<div class="card card2">
+	<a href="https://www.baidu.com" class="front"><img src="3front.png" alt="奇幻小说鲜满宫堂"></a>
+	<a href="https://www.baidu.com" class="back"><img src="3back.png" alt="奇幻小说鲜满宫堂"></a>
+		
+	</div>
+	
+	<div class="card card3">
+	<a href="https://www.baidu.com" class="front"><img src="4front.png" alt="恐怖小说画怖"></a>
+	<a href="https://www.baidu.com" class="back"><img src="4back.png" alt="恐怖小说画怖"></a>
+		
+	</div>
+	
+	<div class="card card4">
+	<a href="file:///D:/dsy%20592%20web%20making/5/Untitled-5.html" class="front"><img src="5front.png" alt="科技玄幻c语言修仙"></a>
+	<a href="file:///D:/dsy%20592%20web%20making/5/Untitled-5.html" class="back"><img src="5.back.png" alt="科技玄幻c语言修仙"></a>
+		
+	</div>
+	
+	
+	
+</body>
+</html>
